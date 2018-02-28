@@ -43,7 +43,7 @@
   "peerDependencies": {
     "falcor": "^0.1.13",
     "react": "^16.2.0",
-    "redux": "^2.0.0 || ^3.0.0"
+    "redux": "^5.0.6"
   },
   "devDependencies": {
     "babel-cli": "^6.3.17",
@@ -67,7 +67,7 @@
     "react": "^16.2.0",
     "react-addons-test-utils": "^0.14.3",
     "react-dom": "^0.14.3",
-    "react-redux": "^4.4.5",
+    "react-redux": "^5.0.6",
     "redux": "^3.6.0",
     "rimraf": "^2.4.3",
     "sinon": "^1.17.6",
