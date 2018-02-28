@@ -41,12 +41,10 @@ export default function reduxFalcor(WrappedComponent) {
     }
 
     handleChange() {
-      const { wrappedInstance } = this.refs;
-
       if (!this.unsubscribe) return;
-      if (!(typeof wrappedInstance.fetchFalcorDeps === 'function')) return;
+      if (!(typeof this.wrappedInstance.fetchFalcorDeps === 'function')) return;
 
-      wrappedInstance.fetchFalcorDeps().then(noop);
+      this.wrappedInstance.fetchFalcorDeps().then(noop);
     }
 
     tryUnsubscribe() {
@@ -61,7 +59,7 @@ export default function reduxFalcor(WrappedComponent) {
         <WrappedComponent
           {...this.props}
           falcor={this.falcor}
-          ref="wrappedInstance"
+          ref={(input) => { this.wrappedInstance = input; }}
         />
       );
     }
